@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="TaskPaneApp"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  Id="41916bd1-b650-4a89-ad1f-acd1f02c3a03"
+  Version="1.0.0.0"
+  ProviderName="DevProvider"
+  DefaultLocale="pt-BR"
+>
+  <DisplayName DefaultValue="Assistente IA Jurídico (Dev)" />
+  <Description DefaultValue="Add-in para desenvolvimento local." />
+  <IconUrl DefaultValue="https://localhost:4000/assets/icon-32.png" />
+  <SupportUrl DefaultValue="https://localhost:4000/help" />
+
+  <AppDomains>
+    <AppDomain>https://localhost:4000</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:4000/taskpane.html?cid=dev&amp;token=devsecret" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="TaskPaneApp"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  Id="REPLACE-WITH-UNIQUE-GUID"
+  Version="1.0.0.0"
+  ProviderName="SuaEmpresaOuNome"
+  DefaultLocale="pt-BR"
+>
+  <DisplayName DefaultValue="Assistente IA Jurídico" />
+  <Description DefaultValue="Add-in de Word multi‑cliente para uso de IA em documentos jurídicos." />
+  <!-- Update the icon URLs to point to your hosted icons -->
+  <IconUrl DefaultValue="https://seu-dominio.com/assets/icon-32.png" />
+  <SupportUrl DefaultValue="https://seu-dominio.com/suporte" />
+
+  <AppDomains>
+    <!-- Add the domains that host your front‑end and backend. The Office client will permit cross‑origin calls only to these domains. -->
+    <AppDomain>https://seu-dominio.com</AppDomain>
+    <!-- Add localhost for local development if needed -->
+    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://localhost:4000</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+
+  <DefaultSettings>
+    <!-- Replace TASKPANE_URL with the full URL to your taskpane.html including
+         client‑specific query parameters, for example:
+         https://seu-dominio.com/taskpane.html?cid=client1&token=changeme-client1
+         Each client needs its own manifest (or a unique assignment) with its own cid and token.
+    -->
+    <SourceLocation DefaultValue="TASKPANE_URL" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
